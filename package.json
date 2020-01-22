@@ -4,13 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server": "json-server --watch db.json --port 3000",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\""
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\"",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +24,10 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "express": "^4.17.1",
     "moment": "^2.24.0",
     "ng2-charts": "^2.2.4",
+    "patch": "0.0.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -47,5 +50,9 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
+  },
+  "engines": {
+    "node": "~10.16.3",
+    "npm": "~6.11.2"
   }
 }
