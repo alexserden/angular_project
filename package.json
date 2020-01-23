@@ -1,5 +1,5 @@
 {
-  "name": "angular_project",
+  "name": "angular-review-varus",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -66,11 +66,11 @@
   "main": "karma.conf.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexserden/angular_project.git"
+    "url": "git+https://github.com/alexserden/angular-review-varus.git"
   },
   "author": "Alexander",
   "bugs": {
-    "url": "https://github.com/alexserden/angular_project/issues"
+    "url": "https://github.com/alexserden/angular-review-varus/issues"
   },
-  "homepage": "https://github.com/alexserden/angular_project#readme"
+  "homepage": "https://github.com/alexserden/angular-review-varus#readme"
 }
