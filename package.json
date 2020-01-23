@@ -1,14 +1,17 @@
 {
-  "name": "home-money",
+  "name": "angular_project",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "build-prod": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "server": "json-server --watch db.json --port 3000",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\"",
     "postinstall": "ng build --aot --prod"
   },
   "private": true,
@@ -24,13 +27,15 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "enhanced-resolve": "^3.3.0",
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "ng2-charts": "^2.2.4",
     "patch": "0.0.1",
     "rxjs": "^5.1.0",
     "typescript": "~2.2.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "json-server": "^0.9.1"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.38",
@@ -49,8 +54,23 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "engines": {
     "node": "10.16.3",
     "npm": "6.11.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexserden/angular_project.git"
+  },
+  "author": "Alexander",
+  "bugs": {
+    "url": "https://github.com/alexserden/angular_project/issues"
+  },
+  "homepage": "https://github.com/alexserden/angular_project#readme"
 }
