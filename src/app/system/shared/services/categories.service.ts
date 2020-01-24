@@ -10,12 +10,12 @@ export class CategoriesService {
   }
 
   addCategory(category: Category): Observable<Category> {
-    return this.http.post('https://localhost:3000//categories', category)
+    return this.http.post('http://localhost:3000/categories', category)
       .map((response: Response) => response.json());
   }
 
   getCategories(): Observable<Category[]> {
-    return this.http.get('https://localhost:3000//categories')
+    return this.http.get('http://localhost:3000/categories')
       .map((response: Response) => response.json());
   }
 

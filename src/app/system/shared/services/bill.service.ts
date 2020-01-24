@@ -9,12 +9,12 @@ export class BillService {
   constructor(private https: Http) {}
 
   getBill(): Observable<Bill> {
-    return this.https.get('https://localhost:3000//bill')
+    return this.https.get('http://localhost:3000/bill')
       .map((response: Response) => response.json());
   }
 
   updateBill(bill: Bill): Observable<Bill> {
-    return this.https.put('https://localhost:3000//bill', bill)
+    return this.https.put('http://localhost:3000/bill', bill)
       .map((response: Response) => response.json());
 
   }
