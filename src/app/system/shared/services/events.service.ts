@@ -10,12 +10,12 @@ export class EventsService  {
   }
 
   addEvent(event: WFMEvent): Observable<WFMEvent> {
-    return this.http.post('http://localhost:3000/events', event)
+    return this.http.post('/events', event)
       .map((response: Response) => response.json());
   }
 
   getEvents(): Observable<WFMEvent[]> {
-    return this.http.get('http://localhost:3000/events')
+    return this.http.get('/events')
       .map((response: Response) => response.json());
   }
 }

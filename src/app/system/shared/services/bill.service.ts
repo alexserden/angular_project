@@ -6,20 +6,20 @@ import {Bill} from '../model/bill.model';
 
 @Injectable()
 export class BillService {
-  constructor(private http: Http) {}
+  constructor(private https: Http) {}
 
   getBill(): Observable<Bill> {
-    return this.http.get('http://localhost:3000/bill')
+    return this.https.get('/bill')
       .map((response: Response) => response.json());
   }
 
   updateBill(bill: Bill): Observable<Bill> {
-    return this.http.put('http://localhost:3000/bill', bill)
+    return this.https.put('/bill', bill)
       .map((response: Response) => response.json());
 
   }
   getCurrency(base: string = 'UAH' ): Observable<any> {
-      return this.http.get(`https://api.exchangerate-api.com/v4/latest/${base}`)
+      return this.https.get(`https://api.exchangerate-api.com/v4/latest/${base}`)
         .map((response: Response) => response.json());
   }
 }

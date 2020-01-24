@@ -10,13 +10,13 @@ export class UsersService {
   }
 
   getUserByEmail(email: string): Observable<User> {
-    return this.http.get(`http://localhost:3000/users?email=${email}`)
+    return this.http.get(`/users?email=${email}`)
       .map((response: Response) => response.json())
       .map((user: User[]) => user[0] ? user[0] : undefined);
   }
 
   createNewUser(user: User): Observable<User> {
-    return this.http.post('http://localhost:3000/users', user)
+    return this.http.post('/users', user)
       .map((response: Response) => response.json());
   }
 }
